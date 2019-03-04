@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Register new user</title>
+<style>
+*{box-sizing: border-box}
+.container{
+	padding: 16px;
+}
+input[type=text], input[type=password]{
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus{
+	background-color: #ddd;
+	outline: none;
+}
+hr{
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+.registerButton{
+	background-color: #4CAF50;
+	color: white;
+	padding: 16px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.9;
+}
+.registerButton:hover{
+	opacity:1;
+}
+
+</style>
+</head>
+<body>
+	<form action="newUserHandler.php" method="post">
+		<div class="container">
+			<h1>Please fill out this form to register a new user</h1>
+			<hr>
+			<label for="userName">User Name</label>
+			<input type="text" placeholder="User Name" name="userName" required>
+			<br/>
+			<label for="userRole">User Role</label>
+			<input type="text" placeholder="User Role" name="userRole" required>
+			<br/>
+			<label for="userNickname">User Nickname</label>
+			<input type="text" placeholder="User Nickname" name="userNickname" required>
+			<br/>
+			<label for="firstName">First Name</label>
+			<input type="text" placeholder="First Name" name="firstName" required>
+			<br/>
+			<label for="middleName">Middle Name</label>
+			<input type="text" placeholder="Middle Name" name="middleName">
+			<br/>
+			<label for="lastName">Last Name</label>
+			<input type="text" placeholder="Last Name" name="lastName" required>
+			<br/>
+			<label for="email1">Email</label>
+			<input type="text" placeholder="Email Address" name="email1" required>
+			<br/>
+			<label for="email2">Alternative Email</label>
+			<input type="text" placeholder="Alternative Email Address" name="email2">
+			<br/>
+			<label for="address1">Address</label>
+			<input type="text" placeholder="Address" name="address1">
+			<br/>
+			<label for="address2">Extended Address</label>
+			<input type="text" placeholder="Extended Address" name="address2">
+			<br/>
+			<label for="city">City</label>
+			<input type="text" placeholder="City" name="city">
+			<br/>
+			<label for="state">State</label>
+			<input type="text" placeholder="State" name="state">
+			<br/>
+			<label for="zipcode">Zip Code</label>
+			<input type="text" placeholder="Zip Code" name="zipcode">
+			<br/>
+			<label for="country">Country</label>
+			<input type="text" placeholder="Country" name="country">
+			<br/>
+			<button type="submit" class="registerButton">Register</button>
+		</div>
+	</form>
+</body>
+<footer>
+	<h6>Samantha Krall Grand Canyon University 2019</h6>
+</footer>
+</html>
