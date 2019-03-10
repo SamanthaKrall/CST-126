@@ -1,31 +1,28 @@
-<html>
-<body>
-<?php  
-if (!isset($_POST['firstName']) || !isset($_POST['lastName'])){
-    echo "<p>You have not entered all the required details. <br />
-        Please go back and try again.< /p>";
-    exit;
-}
-$firstName=$_POST['firstName'];
-$lastName=$_POST['lastName'];
-@$db = new mysqli('localhost', 'root', 'root', 'activity1');
+<?php 
+// Samantha Krall  CST-126 
 
-if (mysqli_connect_errno()){
-    echo "<p>Error: Could not establish connection to database.<br />
-        Please try again later.</p>";
-    exit;
+$firstName= $_POST["firstName"];
+$lastName= $_POST["lastName"];
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "activity1";
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error){
+    die("Connection failed: " . $conn->connect_error);
 }
-$query = "INSERT INTO users (FIRST_NAME, LAST_NAME) VALUES (?, ?)";
-$stmt = $db->prepare($query);
-$stmt->bind_param($firstName, $lastName);
-$stmt->execute();
-if ($stmt->affected_rows > 0){
-    echo "<p>User has been entered into the database.</p>";
-}else {
-    echo "<p>An error has occurred.<br/>
-        The user has not been added.</p>";
+$sql = "INSERT INTO users (firstName, lastName) VALUES ('$firstName', '$lastName')";
+if(empty($firstName)){
+        echo "<br/>The first name is required. Please enter all information.";
 }
-$db->close();
+if(empty($lastName)){
+    echo "<br/>The last name is required. Please enter all information.";
+} 
+if(!($firstName == NULL || $lastName == NULL) && $conn->query($sql) === TRUE){
+    echo "You have been successfully registered!";
+} else {
+    echo "Error: " . $sql . "<br/>" . $conn->error;
+}
+$conn->close();
 ?>
-</body>
-</html>
+
