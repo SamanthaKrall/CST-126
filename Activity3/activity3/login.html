@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- Samantha Krall CST-126 -->
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+</head>
+<body>
+	<form method="POST">
+		Username: <br/>
+		<input type="text" name="username"><br/>
+		Password:<br/>
+		<input type="password" name="password"><br/>
+		<br/><br/>
+		<input type="submit" formaction="loginHandler.php" value="Login" name="Submit"><br/>
+	</form>
+	<br/><br/>
+	<button onclick="goBack()">Go Back</button>
+	<script>
+		function goBack(){
+			window.history.back();
+		}
+	</script>
+</body>
+</html>
