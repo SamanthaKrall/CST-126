@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!-- Samantha Krall CST-126 -->
+<html>
+<body background="frogReading.jpg">
+	<h1 align="center">Welcome back to the Frog Blog!</h1>
+	<form method="POST">
+		Username:<br/>
+		<input type="text" name="userName"><br/>
+		User Role:<br/>
+		<input type="password" name="userRole"><br/><br/>
+		<input type="submit" formaction="loginHandler.php" value="Login" name="Submit"><br/>
+	</form>
+	<?php
+		if (isset($_POST['submit'])) {
+			session_start();
+			$userName = $_POST['userName'];
+			$_SESSION['userName']=$userName;
+	?>
+	<br/>
+	<button onclick="goBack()">Go Back</button>
+	<script>
+		function goBack(){
+			window.history.back();
+		}
+	</script>
+</body>
+</html>
