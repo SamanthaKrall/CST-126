@@ -1,0 +1,109 @@
+<html>
+<head>
+<style>
+	table, th, td{
+		border: 1px solid #4c4c4c;
+  		padding: 16px;
+   	}
+  	hr{
+   		border: 1px solid #f1f1f1;
+   		margin-bottom: 25px;
+   	}
+   	*{
+   		background-color: powderblue;
+   		box-sizing: border-box
+   	}
+	.container{
+		padding: 16px;
+		background-size: 100% 100%;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+	}
+	input[type=text], input[type=password]{
+		width: 100%;
+		padding: 15px;
+		margin: 5px 0 22px 0;
+		display: inline-block;
+		border: none;
+		background: #f1f1f1;
+	}
+	input[type=text]:focus, input[type=password]:focus{
+		background-color: #ddd;
+		outline: none;
+	}
+	textarea{
+		background: #f1f1f1;
+	}
+	.registerButton{
+		background-color: #4CAF50;
+		color: white;
+		padding: 16px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 100%;
+		opacity: 0.9;
+	}
+	.registerButton:hover{
+		opacity:1;
+	}
+	.background {
+		background-size: 100% 100%;
+		width: 100%;
+		height: 100%;
+		background-repeat: no-repeat;
+	}
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+	}
+	header {
+		background-color: blue;
+		padding: 30px;
+		text-align: center;
+		font-size: 35px;
+		color: white;
+	}
+	nav {
+		float: left;
+		width: 30%;
+		background: powderblue;
+		padding: 20px;
+	}
+	nav ul {
+		list-style-type: none;
+		padding: 0;
+	}
+	article {
+		float: left;
+		padding: 20px;
+		width: 70%;
+		background-color: powderblue;
+	}
+	section:after{ /*clear floats after the columns */
+		content: "";
+		display: table;
+		clear: both;
+	}
+	@media(max-width: 600px){ /*makes the boxes stack on top instead of next on small screens */
+		nav, article {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.topnav {
+		background-color: forestgreen;
+		overflow: hidden;
+	}
+	.topnav a, button {
+		background-color: green;
+		float: left;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decorator: none;
+		font-size: 17px;
+	}
+</style>
+</head>
+</html>
