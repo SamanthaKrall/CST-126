@@ -1,0 +1,37 @@
+<?php 
+	include 'css.css'; 
+	session_start();
+	$_SESSION['userName'];
+?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Create new blog post</title>
+</head>
+<body style="background-color:mediumspringgreen">
+    	<div class="topnav">
+			<a href="mainBlogPage.php"><button>Home</button></a>
+			<button onclick="goBack()">Go Back</button>
+			<a href="logout.php"><button>Logout</button></a>
+		</div>
+		<script>
+			function goBack(){
+				window.history.back();
+			}
+		</script>
+		<br>
+	<form method="post" style="color:forestgreen">
+		Title: Keep within 80 characters<br/>
+		<input type="text" name="title"><br/>
+		Subtitle: Keep within 80 characters<br/>
+		<input type="text" name="subtitle"><br/>
+		Blog: Keep within 2000 characters <br/>
+		<textarea rows="20" cols="150" name="blogPost"></textarea><br/>
+		Category: Keep within 80 characters<br/>
+		<input type="text" name="category"><br/>
+		<input type="submit" formaction="newBlog.php" value="Submit" name="Submit"><br/>
+	</form><br/>
+		<img alt="little tree frog" src="littleFrog.jpg" align="right" width="500" height="333">
+</body>
+</html>

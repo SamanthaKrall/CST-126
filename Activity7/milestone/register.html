@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body background="froggie.jpg">
+	    <div class="topnav">
+			<a href="mainBlogPage.php"><button>Home</button></a>
+			<button onclick="goBack()">Go Back</button>
+		</div>
+		<script>
+			function goBack(){
+				window.history.back();
+			}
+		</script>
+		<br>
+	<form method="post">
+		<div class="container">
+			<h1>Please fill out this form to register a new user</h1>
+			<hr>
+			User Name: <br/>
+			<input type="text" placeholder="User Name" name="userName" required>
+			<br/>
+			User Role:<br/>
+			<input type="text" placeholder="User Role" name="userRole" required>
+			<br/>
+			User Nickname:<br/>
+			<input type="text" placeholder="User Nickname" name="userNickname" required>
+			<br/>
+			First Name:<br/>
+			<input type="text" placeholder="First Name" name="firstName" required>
+			<br/>
+			Middle Name:<br/>
+			<input type="text" placeholder="Middle Name" name="middleName">
+			<br/>
+			Last Name:<br/>
+			<input type="text" placeholder="Last Name" name="lastName" required>
+			<br/>
+			Email:<br/>
+			<input type="text" placeholder="Email Address" name="email1" required>
+			<br/>
+			Alternative Email:<br/>
+			<input type="text" placeholder="Alternative Email Address" name="email2">
+			<br/>
+			Address:<br/>
+			<input type="text" placeholder="Address" name="address1">
+			<br/>
+			Extended Address:<br/>
+			<input type="text" placeholder="Extended Address" name="address2">
+			<br/>
+			City:<br/>
+			<input type="text" placeholder="City" name="city">
+			<br/>
+			State:<br/>
+			<input type="text" placeholder="State" name="state">
+			<br/>
+			Zip Code:<br/>
+			<input type="text" placeholder="Zip Code" name="zipcode">
+			<br/>
+			Country:<br/>
+			<input type="text" placeholder="Country" name="country">
+			<br/><br/>
+			<input type="submit" formaction="registerHandler.php" value="Submit"/><br/><br/>
+		</div>
+	</form>
+	<?php
+		if (isset($_POST['submit'])) {
+			session_start();
+			$userName = $_POST['userName'];
+			$_SESSION['userName']=$userName;
+	?>
+</body>
+<footer>
+	<h6>Samantha Krall Grand Canyon University 2019</h6>
+</footer>
+</html>

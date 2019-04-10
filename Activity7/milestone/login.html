@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!-- Samantha Krall CST-126 -->
+<html>
+<body background="frogReading.jpg">
+	<h1 align="center" style="color:violet">Welcome back to the Frog Blog!</h1>
+	<form method="POST" align="center" style="color:firebrick" >
+		Username:<br/>
+		<input type="text" name="userName" placeholder="User Name"><br/>
+		User Role:<br/>
+		<input type="password" name="userRole" placeholder="User Role"><br/><br/>
+		<input type="submit" formaction="loginHandler.php" value="Login" name="Submit"><br/>
+	</form>
+	<br/>
+	<button onclick="goBack()">Go Back</button>
+	<script>
+		function goBack(){
+			window.history.back();
+		}
+	</script>
+</body>
+</html>
